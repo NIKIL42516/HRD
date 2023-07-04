@@ -36,7 +36,7 @@ def getdata_api(url,dataTagId,startEpoch,endEpoch):
     #print(body)
 
     #print (url, body)
-    res = session.post(url=url,json=body)
+    res = requests.post(url=url,json=body)
     print(res.content)
     custJson = json.loads(res.content)
     df = {}
