@@ -50,7 +50,7 @@ def getdata_api(url,dataTagId,startEpoch,endEpoch):
     return sublist
 
 def postDataApi(outputTag,store_vals_to_post):
-    url = "https://hrd-dcs.ngrok.dev/exactdata/api/v1/datapoints"
+    url = "http://10.36.141.32:8080/api/v1/datapoints/query"
     # url="http://20.228.168.6//kairosapi/api/v1/datapoints"
     batch_size = 10000
     for i in range(0, len(store_vals_to_post), batch_size):
